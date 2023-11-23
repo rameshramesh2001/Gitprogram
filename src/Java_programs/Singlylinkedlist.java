@@ -3,56 +3,65 @@ package Java_programs;
 public class Singlylinkedlist {
 	//public class SinglyLinkedList {    
 	    //Represent a node of the singly linked list    
-	    class Node{    
-	        int data;    
-	        Node next;    
-	            
-	        public Node(int data) {    
-	            this.data = data;    
-	            this.next = null;    
-	        }    
-	    }    
-	     
-	    //Represent the head and tail of the singly linked list    
-	    public Node head = null;    
-	    public Node tail = null;    
-	        
-	    //addNode() will add a new node to the list    
-	    public void addNode(int data) {    
-	        //Create a new node    
-	        Node newNode = new Node(data);    
-	            
-	        //Checks if the list is empty    
-	        if(head == null) {    
-	            //If list is empty, both head and tail will point to new node    
-	            head = newNode;    
-	            tail = newNode;    
-	        }    
-	        else {    
-	            //newNode will be added after tail such that tail's next will point to newNode    
-	            tail.next = newNode;    
-	            //newNode will become new tail of the list    
-	            tail = newNode;    
-	        }    
-	    }    
-	        
-	    //display() will display all the nodes present in the list    
-	    public void display() {    
-	        //Node current will point to head    
-	        Node current = head;    
-	            
-	        if(head == null) {    
-	            System.out.println("List is empty");    
-	            return;    
-	        }    
-	        System.out.println("Nodes of singly linked list: ");    
-	        while(current != null) {    
-	            //Prints each node by incrementing pointer    
-	            System.out.print(current.data + " ");    
-	            current = current.next;    
-	        }    
-	        System.out.println();    
-	    }    
-	        
-	    
-	}  
+	class Node {
+	    int data;
+	    Node next;
+
+	    public Node(int data) {
+	        this.data = data;
+	        this.next = null;
+	    }
+	}
+
+	class LinkedList {
+	    Node head;
+
+	    public LinkedList() {
+	        this.head = null;
+	    }
+
+	    // Method to add a new node to the end of the list
+	    public void append(int data) {
+	        Node newNode = new Node(data);
+
+	        if (head == null) {
+	            head = newNode;
+	            return;
+	        }
+
+	        Node last = head;
+	        while (last.next != null) {
+	            last = last.next;
+	        }
+
+	        last.next = newNode;
+	    }
+
+	    // Method to print the elements of the list
+	    public void display() {
+	        Node current = head;
+
+	        while (current != null) {
+	            System.out.print(current.data + " ");
+	            current = current.next;
+	        }
+	        System.out.println();
+	    }
+	}
+
+	public class Main {
+	    public static void main(String[] args) {
+	        LinkedList list = new LinkedList();
+
+	        // Adding elements to the linked list
+	        list.append(1);
+	        list.append(2);
+	        list.append(3);
+	        list.append(4);
+
+	        // Displaying the linked list
+	        System.out.println("Linked List elements:");
+	        list.display();
+	    }
+	}
+}
