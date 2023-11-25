@@ -11,7 +11,7 @@ public class Node1 {
 public void inorder(Node currentn) {
 	if(currentn != null) {
 		inorder(currentn.left);
-		System.out.print(" "+currentn.data);
+		System.out.println(" "+currentn.data);
 		inorder(currentn.right);
 	}
 }
