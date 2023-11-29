@@ -13,7 +13,7 @@ public class Example1 {
 		hashmap.put("Ect", "...");
 		//System.out.println(hashmap.);
 		//hashmap.keySet()
-;		String search="34w";
+;		String search="24w";
 		hashmap.forEach((key,value)->{
 			if(key.contains(search)||value.contains(search)) {
 				answer=true;
