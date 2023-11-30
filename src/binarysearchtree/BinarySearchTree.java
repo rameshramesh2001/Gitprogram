@@ -6,10 +6,19 @@ public class BinarySearchTree {
     BinarySearchTree() {
         root = null;
     }
+    
+    void insert(int key) {
+    	insert(root, key);
+    }
+    
     Node insert(Node node, int key) {
        
         if (node == null) {
             node = new Node(key);
+            if(root == null)
+            {
+            	root = node;
+            }
             return node;
         }
  

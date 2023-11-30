@@ -20,7 +20,7 @@ public class Node {
         tree.insert(tree.root, 80);
  
         
-        int key = 6;
+        int key = 20;
  
        
         if (tree.search(tree.root, key) == null)
