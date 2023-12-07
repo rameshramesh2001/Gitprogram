@@ -27,8 +27,7 @@ public class Example1 {
 	public int height(Example node) {
 				 if(node==null) {
 					 return 0;
-				 }
-				 else {
+				// else {
 				 int leftheight=height(node.left);
 				 int rightheight=height(node.right);
 				
