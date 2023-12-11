@@ -34,5 +34,6 @@ public class Example1 {
 				 return Math.max(leftheight, rightheight +1);
 			
 				 }
+				//return 0;
 	}
 }

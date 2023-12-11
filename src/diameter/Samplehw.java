@@ -12,7 +12,7 @@ public class Samplehw {
 		Samplehw root = new Samplehw(9);
 		root.left=new Samplehw(7);
 		root.right=new Samplehw(8);
-		/*root.left.left= new Samplehw(6);
+		root.left.left= new Samplehw(6);
 		root.left.right= new Samplehw(22);
 		root.left.left.right=new Samplehw(22);
 		root.left.left.right.left=new Samplehw(13);
@@ -24,7 +24,7 @@ public class Samplehw {
 		root.right.right.right=new Samplehw(9);
 		root.right.right.left.left=new Samplehw(3);
 		root.right.right.left.right=new Samplehw(20);
-		root.right.right.left.right.left=new Samplehw(19);*/
+		root.right.right.left.right.left=new Samplehw(19);
 		
 		Samplehw2 pa = new Samplehw2();
 		System.out.println("My diameter value is:"+pa.diameter(root));
