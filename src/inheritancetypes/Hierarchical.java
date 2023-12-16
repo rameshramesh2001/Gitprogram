@@ -7,11 +7,17 @@ public class Hierarchical {
 	
 	
 	public static void main(String[] args) {
-		Hierarchical3 ob = new Hierarchical3();
+		Hierarchical2 ob = new Hierarchical2();
+		Hierarchical1 ob1 = new Hierarchical1();
+		Hierarchical3 ob2 = new Hierarchical3();
+		
+		
 		ob.classA();
-		ob.classB();
+		ob1.classB();
+		//ob.classB();
+		//ob.classA();
 		ob.classC();
-		ob.classD();
+		ob2.classD();
 
 	}
 
